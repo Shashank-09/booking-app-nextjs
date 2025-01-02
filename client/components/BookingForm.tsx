@@ -24,7 +24,7 @@ const BookingForm = () => {
 
   useEffect(() => {
     const today = new Date();
-    const formattedDate = today.toISOString().split('T')[0]; 
+    const formattedDate = today.toLocaleDateString("en-CA")
     setFormData((prev) => ({ ...prev, date: formattedDate }));
   }, []);
 
