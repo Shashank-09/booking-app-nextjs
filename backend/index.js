@@ -18,8 +18,8 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 
-app.use((req, res) => {
-   res.send("Hello from server") 
+app.get('/' , (req , res ) => {
+  res.send("Server is running")
 })
 
 connectDB(MONGODB_URL)
