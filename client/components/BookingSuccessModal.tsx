@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
 interface BookingSuccessProps {
