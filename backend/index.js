@@ -5,7 +5,7 @@ const PORT = 4000
 const bodyParser = require('body-parser');
 const bookingRoutes = require('./routes/bookingRoutes');
 require('dotenv').config()
-const Url = process.env.Url
+const MONGODB_URL = process.env.MONGODB_URL
 
 const cors = require('cors');  
 
@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended : false}));
 //    res.send("Hello from server") 
 // })
 
-connectDB(Url)
+connectDB(MONGODB_URL)
 
 app.use('/api', bookingRoutes);
 
